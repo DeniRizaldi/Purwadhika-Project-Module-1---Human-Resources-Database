@@ -28,5 +28,12 @@ Terdapat pula query yang dicantumkan untuk mengambil isi dari database.
 ## 2. DATA MANIPULATION
 Sebelum melakukan analisis lebih lanjut, hal yang harus dilakukan adalah mengecek informasi serta anomali pada data. Pada bagian ini, data akan _dibersihkan_, sehingga output akhir yang diharapkan adalah terdapat sebuah dataset yang bersih yang dapat dianalisis lebih lanjut dengan menampilkan visualisasi, serta melihat statistics-nya.
 ### a. Data Anomalies
-Melihat anomali-anomali pada detail data.
-### b. 
+Melihat anomali-anomali pada detail data dari tampilan non-null dan tipe datanya.
+### b. Melihat Data Sekilas dari General Info
+Ada dua kesimpulan yang diambil, yaitu Kesimpulan pertama adalah bahwa terdapat missing value yang harus ditanggulangi. Kesimpulan keduanya adalah terdapat features yang memiliki tipe data yang salah dan harus diubah sesuai dengan tipe data seharusnya.
+### c. Missing Values
+Yang paling jadi sorotan adalah COUNTRY_ID dan COUNTRY_NAME yang memiliki total missing value yang lebih dari 30%.
+### d. Handling Anomalies
+Pertama, ditemukan COUNTRY_ID yang seharusnya _UK_, namun berisi _OX_, dengan penanggulangannya adalah mengganti value dari COUNTRY_ID tersebut.
+Kedua, ada 1 missing value yang relatif sama di setiap kolom, dengan penanggulangannya adalah menghapus missing value tersebut.
+
